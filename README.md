@@ -1,6 +1,6 @@
 # Customer Relationship Manager
 
-## Customer Relationship Manager is a software tool  which helps an organization administer its interactions with customers.
+## Customer Relationship Manager is a software tool that helps an organization administer its interactions with customers.
 
 
 I developed a **CRM** that supports **FULL CRUD** operations on Customer.
