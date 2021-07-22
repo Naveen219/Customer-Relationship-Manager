@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Customer Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" th:href = "@{/css/style.css}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="d-sm-flex" id="nav-bar">
+            <div id="left">
+                <img id="logo" th:src="@{/img/logo.jpg}" alt="crm logo">
+            </div>
+            <div id="middle">
+                <h1 id="title">Customer Relationship Manager</h1>
+            </div>
+        </div>
+        <div style = "margin-top: 20px">
+            <div style = "text-align: center">
+                <h2 style = "font-family: Bahnschrift">Update Customer</h2>
+            </div>
+            <div id = "customer-form">
+                <form  action = "#" th:action="@{/customer-add}" method = "post" th:object ="${customer}">
+                    <input type = "hidden" th:field = "*{id}">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input th:field = "*{firstName}"  type = "text" class="form-control" placeholder="Enter First Name" id="first-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input th:field = "*{lastName}" type="text" class="form-control" placeholder="Enter Last Name" id="last-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input th:field = "*{email}" type="email" class="form-control" placeholder="Enter Email" id="email">
+                    </div>
+                    <div style = "text-align: center">
+                        <button style = "width: 100px; height: 50px; font-size: 20px;" type="submit" class="btn btn-primary" >Update</button>
+                    </div>
+                </form>
+                <div>
+                    <a href = "/" id = "customer-link">Back to Customer list</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
