@@ -54,7 +54,7 @@
 
                         <a style="width: 80px;" th:href="@{/customer-update/{id}(id=${customer.id})}" role="button" class="btn btn-success">Update</a>
                         <a style="width: 80px;" th:href="@{/customer-delete/{id}(id=${customer.id})}" role="button" class="btn btn-danger"
-                           onclick="if (confirm('Are you sure you want to delete this customer?')) return true">Delete</a>
+                           onclick="return confirm('Are you sure you want to delete this customer?');">Delete</a>
                     </td>
                 </tr>
 
